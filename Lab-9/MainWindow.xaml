@@ -1,0 +1,41 @@
+﻿<Window x:Class="Lab_9.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_9"
+        mc:Ignorable="d"
+        Title="Кинофильмы" Height="417" Width="541" ResizeMode="NoResize">
+    <Grid Height="430" VerticalAlignment="Center" HorizontalAlignment="Left" Width="767">
+        <DataGrid x:Name="dataGrid" Grid.Column="0" Margin="10,55,427,204"/>
+        <GroupBox Header="Добавление кино" Margin="11,244,0,66" HorizontalAlignment="Left" Width="340">
+            <Grid Height="106" VerticalAlignment="Top" Margin="0,0,-2,0">
+                <TextBlock HorizontalAlignment="Left" Margin="48,10,0,0" Text="Название" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="48,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="67"/>
+                <TextBlock HorizontalAlignment="Left" Margin="133,10,0,0" Text="жанр" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBox x:Name="Type" HorizontalAlignment="Left" Margin="133,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="94"/>
+                <TextBlock HorizontalAlignment="Left" Margin="245,10,0,0" Text="Год выпуска" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBox x:Name="Year" MaxLength="4" HorizontalAlignment="Left" Margin="245,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"/>
+                <TextBlock HorizontalAlignment="Left" Margin="9,57,0,0" Text="Продолжительность" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBox x:Name="Time" MaxLength="4" HorizontalAlignment="Left" Margin="11,78,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="107"/>
+                <Button Content="Удалить" HorizontalAlignment="Left" Margin="272,76,0,0" VerticalAlignment="Top" Click="Удалить_Click"/>
+                <Button Content="Добавить или изменить" HorizontalAlignment="Left" Margin="127,76,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.554,0.482" Click="Добавить_Click"/>
+                <TextBlock HorizontalAlignment="Left" Margin="6,13,0,0" Text="№" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBox x:Name="Id" HorizontalAlignment="Left" Margin="4,31,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="37" TextChanged="Id_TextChanged"/>
+
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Поиск по жанру" HorizontalAlignment="Left" Margin="359,244,0,66" Width="152">
+            <Grid Height="105" VerticalAlignment="Top" Margin="0,0,-2,0">
+                <TextBlock HorizontalAlignment="Left" Margin="11,10,0,0" Text="жанр" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBox x:Name="SearchType" HorizontalAlignment="Left" Margin="11,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="Rez_TextChanged"/>
+                <Button Content=" Поиск " HorizontalAlignment="Left" Margin="14,66,0,0" VerticalAlignment="Top" Click="Поиск_Click"/>
+                <Button Content=" Сброс " HorizontalAlignment="Left" Margin="86,66,0,0" VerticalAlignment="Top" Click="Сброи_Click"/>
+            </Grid>
+        </GroupBox>
+        <TextBox x:Name="Rez" HorizontalAlignment="Left" Margin="350,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" Height="171"/>
+        <Button Content=" Х " HorizontalAlignment="Left" Margin="504,32,0,0" VerticalAlignment="Top" Click="Выход_Click"/>
+        <Button Content=" ? " HorizontalAlignment="Left" Margin="478,32,0,0" VerticalAlignment="Top" Click="О_программе_Click"/>
+
+    </Grid>
+</Window>
